@@ -1,7 +1,5 @@
-#Discord nick / Discord ismim
+#Discord nick for helps / Discord ismim yardım için
 #AtesliSerap#9070
-#My server / benim sunucum 
-#https://discord.gg/REVdwWyTKN
 import discord
 from discord.ext import commands
 import random
