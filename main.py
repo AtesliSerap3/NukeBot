@@ -1,5 +1,6 @@
-#Discord nick for helps / Discord ismim yardım için
+#Discord nick / Discord ismim
 #AtesliSerap#9070
+from turtle import clear
 import discord
 from discord.ext import commands
 import random
@@ -7,7 +8,7 @@ from discord import Permissions
 import colorama
 from colorama import Fore, Back, Style
 import asyncio
-#write token here / tokeninizi buraya yazın
+#token here / tokeniniz buraya
 token = "Token"
 
 colorama.init()
@@ -21,7 +22,7 @@ client = commands.Bot(command_prefix="z!")
 @client.event
 async def on_ready():
    print(Fore.RED + ''' 
-   
+
  ███▄    █  █    ██  ██ ▄█▀▓█████     ▄▄▄▄    ▒█████  ▄▄▄█████▓
  ██ ▀█   █  ██  ▓██▒ ██▄█▒ ▓█   ▀    ▓█████▄ ▒██▒  ██▒▓  ██▒ ▓▒
 ▓██  ▀█ ██▒▓██  ▒██░▓███▄░ ▒███      ▒██▒ ▄██▒██░  ██▒▒ ▓██░ ▒░
@@ -30,12 +31,9 @@ async def on_ready():
 ░ ▒░   ▒ ▒ ░▒▓▒ ▒ ▒ ▒ ▒▒ ▓▒░░ ▒░ ░   ░▒▓███▀▒░ ▒░▒░▒░   ▒ ░░   
 ░ ░░   ░ ▒░░░▒░ ░ ░ ░ ░▒ ▒░ ░ ░  ░   ▒░▒   ░   ░ ▒ ▒░     ░    
    ░   ░ ░  ░░░ ░ ░ ░ ░░ ░    ░       ░    ░ ░ ░ ░ ▒    ░      
-         ░    ░     ░  ░      ░  ░    ░          ░ ░       
-
-[1] z!yardim chat to nuke the server. / chate z!yardim yazarak sunucuyu nukeleyin.
-[2] z!help is a fake help page. / z!help sahte bir yardım sayfasıdır.
-[3] z!commands stop server nuking. / z!commands sunucuyu nukelemeyi durdurur.  
-
+         ░    ░     ░  ░      ░  ░    ░          ░ ░           
+         
+You can see the commands by typing z!help in the channel. / Herhangi bir kanala z!help yazarak komutları görebilirsiniz
 ''')
 
 @client.command()
@@ -43,6 +41,23 @@ async def on_ready():
 async def dur(ctx):
     await ctx.bot.logout()
     print (Fore.GREEN + f"{client.user.name} başarıyla çıkış yaptı." + Fore.RESET)
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+  
+    if message.author.bot:
+        return
+  
+    if message.content.lower() == 'z!help':
+        await message.channel.send('''
+**z!yardim chat to nuke the server. / chate z!yardim yazarak sunucuyu nukeleyin.**
+
+**z!help is a fake help page. / z!help sahte bir yardım sayfasıdır.**
+
+**z!commands stop server nuking. / z!commands sunucuyu nukelemeyi durdurur.**  
+''')
 
 @client.command()
 async def yardim(ctx):
