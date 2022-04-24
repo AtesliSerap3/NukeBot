@@ -7,7 +7,7 @@ from discord import Permissions
 import colorama
 from colorama import Fore, Back, Style
 import asyncio
-#token here / tokeniniz buraya
+#write token here / tokeninizi buraya yazın
 token = "Token"
 
 colorama.init()
