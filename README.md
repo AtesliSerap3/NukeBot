@@ -1,5 +1,5 @@
 # Bot is active screen : 
-![image](https://resimlink.com/yHGCMP4N8xoL)
+![image](https://cdn.discordapp.com/attachments/966440541975883847/967926392178221116/lol.png)
 
 # Tutorial : 
 Download files
