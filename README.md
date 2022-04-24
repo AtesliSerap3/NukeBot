@@ -1,5 +1,5 @@
 # Bot is active screen : 
-![image](https://r.resimlink.com/yHGCMP4N8xoL.png)
+![image](https://resimlink.com/yHGCMP4N8xoL)
 
 # Tutorial : 
 Download files
