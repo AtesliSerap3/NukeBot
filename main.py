@@ -37,7 +37,7 @@ z!nuke chat to nuke the server. / chate z!nuke yazarak sunucuyu nukeleyin.
 
 z!help is a fake help page. / z!help sahte bir yardım sayfasıdır.
 
-z!stop is stoping the server nuke. / z!stop sunucuyu nukelemeyi durdurur.*
+z!stop is stoping the server nuke. / z!stop sunucuyu nukelemeyi durdurur.
 
 ''')
 
