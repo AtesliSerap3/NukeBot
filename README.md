@@ -1,6 +1,3 @@
-# Bot is active screen : 
-![image](https://cdn.discordapp.com/attachments/966440541975883847/967926392178221116/lol.png)
-
 # Tutorial : 
 Download files
 ![image](https://cdn.discordapp.com/attachments/966440093277634590/967887201864146994/lol.png)
