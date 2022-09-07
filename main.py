@@ -1,5 +1,5 @@
 #Discord nick / Discord ismim
-# serap puro#9070
+# ardas#0011
 from turtle import clear
 import discord
 from discord.ext import commands
